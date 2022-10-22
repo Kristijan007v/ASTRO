@@ -38,14 +38,14 @@ html,
 body {
   margin: 0;
   color: white;
-  background: -webkit-gradient(
+  /* background: -webkit-gradient(
       linear,
       left top,
       left bottom,
       from(var(--purple-bg-primary)),
       to(var(--purple-bg-secondary))
     )
-    fixed;
+    fixed; */
   scroll-behavior: smooth;
 }
 
@@ -102,4 +102,24 @@ h1 {
 
 .spacing {
   margin-bottom: 4rem;
+}
+
+/* TEST */
+html,
+body {
+  background: linear-gradient(-45deg, #07060a, #2a233e, #27c93f);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

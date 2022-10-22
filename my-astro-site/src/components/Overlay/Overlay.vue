@@ -19,20 +19,22 @@
         </svg>
       </button>
     </div>
-    <template v-if="test === true">
-      <div>afjsksajfksajfsaf</div>
-    </template>
     <slot></slot>
   </div>
 </template>
 <script setup lang="ts">
 import { ref, watch } from "vue";
 
-const isOpened = ref(false);
-const test = ref(false);
+interface Props {
+  isOpened: boolean;
+}
+
+const props = defineProps<Props>();
+
+const isOpened = ref(props.isOpened);
 
 const closeOverlay = () => {
-  test.value = true;
+  isOpened.value = true;
 };
 
 watch(

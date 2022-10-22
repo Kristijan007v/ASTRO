@@ -3,6 +3,11 @@ import HeaderLink from "../HeaderLink.astro";
 import SearchIcon from "../icons/search-icon.astro";
 import SearchBar from "../SearchBar/SearchBar.vue";
 
+let isOpened = false;
+
+const openSearchOverlay = () => {
+  isOpened = true;
+};
 
 ---
 
@@ -12,7 +17,7 @@ import SearchBar from "../SearchBar/SearchBar.vue";
         <HeaderLink class="nav__link" href="/blog">Blog</HeaderLink>
         <HeaderLink class="nav__link" href="/contact-me">Contact</HeaderLink>
     </div>
-    <SearchIcon />
+    <!-- <SearchIcon /> -->
     <SearchBar />
 </nav>
 <style>
