@@ -24,10 +24,12 @@ const newTags = tags.map((tag) => {
 
 ---
 
-<div class="card" {...props}>
+<article class="card" {...props}>
+    {imageURL &&
     <div class="image__container">
         <img src={imageURL} alt={title} />
     </div>
+    }
     <h4>{title}</h4>
     <p>{shortDescription}</p>
     <div class="card__footer">
@@ -44,7 +46,7 @@ const newTags = tags.map((tag) => {
             </div>
         </a>
     </div>
-</div>
+</article>
 <style>
 	.card{
     padding: 1.4rem 1rem 1.4rem 1rem;
@@ -104,6 +106,10 @@ const newTags = tags.map((tag) => {
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
+    }
+
+    h4{
+        padding-top: 1.2rem;
     }
 
 

@@ -1,23 +1,24 @@
 ---
 interface Props {
   title: string;
+  id?: string;
   addSpacing?: boolean;
-  clickToRead?: boolean;
+  clickToRead?: string;
   seeMoreText?: string;
   seeMoreLink?: string;
 }
 
-const {title, addSpacing, clickToRead, seeMoreLink, seeMoreText} = Astro.props;
+const {title, id, addSpacing, clickToRead, seeMoreLink, seeMoreText} = Astro.props;
 
 ---
 {addSpacing && <div class="spacing" />}
 
-<section>
+<section id={id}>
 	<div class="flex">
     <h2 class="heading__h2">{title}</h2>
     {clickToRead &&
     <p>
-     {"->"} click to read
+    {clickToRead}
     </p>
     }
   </div>
@@ -33,14 +34,21 @@ const {title, addSpacing, clickToRead, seeMoreLink, seeMoreText} = Astro.props;
   }
 </section>
 <style>
+  section{
+    scroll-margin-top: 18px;
+  }
+
   div{
     padding-bottom: 2rem;
   }
 
   .flex{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+  }
+
+  .flex > * {
+    margin-right: 1rem;
   }
 
   .link__more{
@@ -52,13 +60,10 @@ const {title, addSpacing, clickToRead, seeMoreLink, seeMoreText} = Astro.props;
   }
 
   p{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 21px;
-    /* identical to box height */
-
-
-    color: #636363;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  color: #636363;
   }
 </style>

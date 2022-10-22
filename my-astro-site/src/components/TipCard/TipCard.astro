@@ -10,7 +10,7 @@ const { title, ...props } = Astro.props;
 
 ---
 
-<div class="card"  {...props}>
+<div class="card card-gradient-2"  {...props}>
     <h6>{title}</h6>
     <slot/>
     <div class="card__footer">
@@ -35,18 +35,21 @@ const { title, ...props } = Astro.props;
         border-radius: 12px;
         border: 1px solid;
         border-image-source: linear-gradient(180deg, #6DE5B8 0%, #9036EA 100%);
+        /* padding: 1rem 1rem 1rem 1rem; */
     }
 
     .card__footer{
-        position: absolute;
         display: flex;
-        bottom: 0;
-        right: 0;
+        justify-content: flex-end;
+        align-items: center;
         padding: 1rem;
     }
 
     .card__footer > span {
         margin-left: 0.6rem;
+    }
+    h6{
+        padding: 1rem 0.5rem 0.4rem 0.5rem;
     }
 
     span{
@@ -56,6 +59,14 @@ const { title, ...props } = Astro.props;
         font-size: 14px;
         color: white;
     }
+
+    .card-gradient-2 {
+    background: 
+        linear-gradient(var(--gray-bg), var(--gray-bg)) padding-box,
+        linear-gradient(to right, #6DE5B8, #9036EA) border-box;
+    border: 1px solid transparent;
+    }
+
 
 
 

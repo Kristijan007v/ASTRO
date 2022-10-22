@@ -13,6 +13,8 @@ h4,
 h5,
 h6 {
   font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 p {
@@ -27,6 +29,7 @@ p {
   --discord-color: #a855f7;
   --gray-bg: #171717;
   --green: #27c93f;
+  --link: hsla(212, 100%, 50%, 1);
 }
 
 /* GLOBAL STYLES SHEET */

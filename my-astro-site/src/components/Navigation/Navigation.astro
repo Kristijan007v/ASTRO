@@ -1,0 +1,34 @@
+---
+import HeaderLink from "../HeaderLink.astro";
+import SearchIcon from "../icons/search-icon.astro";
+import SearchBar from "../SearchBar/SearchBar.vue";
+
+
+---
+
+<nav class="flex">
+    <div class="nav__links">
+        <HeaderLink class="nav__link"  href="/#about-me">About</HeaderLink>
+        <HeaderLink class="nav__link" href="/blog">Blog</HeaderLink>
+        <HeaderLink class="nav__link" href="/contact-me">Contact</HeaderLink>
+    </div>
+    <SearchIcon />
+    <SearchBar />
+</nav>
+<style>
+    nav{
+		font-size: 17px !important;
+	}
+
+	.flex{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.5rem;
+	}
+
+    .nav__link{
+		margin-right: 0.75rem;
+	}
+
+</style>

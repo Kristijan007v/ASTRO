@@ -1,0 +1,40 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation/Navigation.astro";
+
+export interface Props {
+    pageTitle?: string;
+	content: {
+		title: string;
+		description: string;
+	};
+}
+
+const {
+    pageTitle,
+	content: { title, description},
+} = Astro.props;
+
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+
+	<body>
+		<Navigation />
+
+        <main class="container">
+            {pageTitle &&
+            <h1>{pageTitle}</h1>
+            }
+            <!-- FOR CHILDREN -->
+            <slot />
+        </main>
+
+		<Footer />
+	</body>
+</html>
