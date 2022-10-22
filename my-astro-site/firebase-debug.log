@@ -1,0 +1,21 @@
+[debug] [2022-10-22T18:02:19.153Z] ----------------------------------------------------------------------
+[debug] [2022-10-22T18:02:19.154Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-10-22T18:02:19.155Z] CLI Version:   11.15.0
+[debug] [2022-10-22T18:02:19.155Z] Platform:      win32
+[debug] [2022-10-22T18:02:19.155Z] Node Version:  v16.14.2
+[debug] [2022-10-22T18:02:19.155Z] Time:          Sat Oct 22 2022 20:02:19 GMT+0200 (srednjoeuropsko ljetno vrijeme)
+[debug] [2022-10-22T18:02:19.156Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-22T18:02:19.161Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-22T18:02:19.162Z] > authorizing via signed-in user (kiki.vidovic.6969@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\krist\Downloads\ASTRO\my-astro-site
+

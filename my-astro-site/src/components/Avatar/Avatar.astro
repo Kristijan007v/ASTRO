@@ -1,0 +1,23 @@
+---
+interface Props {
+  imageURL: string;
+}
+
+const { imageURL, ...props } = Astro.props;
+
+
+
+---
+
+<div >
+    <img class="avatar"  src={imageURL} {...props} />
+</div>
+<style>
+	.avatar{
+        border-radius: 100%;
+        width: 132px;
+        height: 132px;
+    }
+
+
+</style>

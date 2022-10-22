@@ -1,0 +1,102 @@
+/* IMPORT INTER FONT */
+
+/* Inter */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
+
+h1,
+h2,
+h2,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 28px;
+}
+
+/* ROOT VARIABLES */
+:root {
+  --purple-bg-primary: #2a233e;
+  --purple-bg-secondary: #07060a;
+  --discord-color: #a855f7;
+  --gray-bg: #171717;
+  --green: #27c93f;
+}
+
+/* GLOBAL STYLES SHEET */
+
+html,
+body {
+  margin: 0;
+  color: white;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(var(--purple-bg-primary)),
+      to(var(--purple-bg-secondary))
+    )
+    fixed;
+  scroll-behavior: smooth;
+}
+
+a {
+  all: unset;
+  font-family: "Inter", sans-serif;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+/* TYPOGRAPHY */
+
+h6 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.heading__h1 {
+  color: #fff;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.heading__h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 96%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 139.02%;
+  color: #ffffff;
+}
+
+.spacing {
+  margin-bottom: 4rem;
+}

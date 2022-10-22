@@ -1,0 +1,48 @@
+---
+interface Props{
+    count: number;
+}
+
+const {count} = Astro.props;
+
+
+---
+
+<div class="counter__items">
+    <div class="counter__item green"></div>
+    <div class="counter__item">
+        <p>
+            <span class="count">
+                {count}
+            </span>
+            members online
+        </p>
+    </div>
+</div>
+<style>
+    .counter__items{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .counter__items > *{
+        margin: 0 8px;
+    }
+    .count{
+        color: #27C93F;
+    }
+    .green{
+    width: 16px;
+    height: 16px;
+    background: #27C93F;
+    border-radius: 50%;
+    }
+
+    p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    }
+</style>

@@ -1,0 +1,64 @@
+---
+interface Props {
+  title: string;
+  addSpacing?: boolean;
+  clickToRead?: boolean;
+  seeMoreText?: string;
+  seeMoreLink?: string;
+}
+
+const {title, addSpacing, clickToRead, seeMoreLink, seeMoreText} = Astro.props;
+
+---
+{addSpacing && <div class="spacing" />}
+
+<section>
+	<div class="flex">
+    <h2 class="heading__h2">{title}</h2>
+    {clickToRead &&
+    <p>
+     {"->"} click to read
+    </p>
+    }
+  </div>
+  <!-- FOR CHILDREN -->
+  <slot/>
+
+  <div class="link__spacing"></div>
+  <!-- IF SEEMORETEXT -->
+  {seeMoreText &&
+  <a href={seeMoreLink} class="link__more">
+    {seeMoreText}
+  </a>
+  }
+</section>
+<style>
+  div{
+    padding-bottom: 2rem;
+  }
+
+  .flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .link__more{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  color: #636363;
+  }
+
+  p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+
+
+    color: #636363;
+  }
+</style>

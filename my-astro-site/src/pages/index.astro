@@ -1,0 +1,37 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import Section from '../components/Section.astro';
+import Card from '../components/Card/Card.astro';
+import TipCard from '../components/TipCard/TipCard.astro';
+import BlogCard from '../components/BlogCard/BlogCard.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header class="spacing"/>
+		<main class="container">
+		<Section title="About me" addSpacing>
+			<Card isCode={true}>
+				<p>
+					I am a self-taught software developer with a passion for creating beautiful 💄, fast ⚡, and responsive 📱 websites. I have a strong background in web development and I love to work with new web technologies and I am always looking for new ways to improve my skills 🤓 and knowledge 📖.
+				</p>
+			</Card>
+		</Section>
+		<Section title="Quick tips" addSpacing clickToRead>
+			<TipCard title="Best typescript practices, tips & tricks." />
+		</Section>
+		<Section title="Blog" seeMoreText="See all posts -->" addSpacing seeMoreLink="/blog">
+		<BlogCard title="10 Design Patterns in TypeScript" shortDescription="A breakdown 10 software design patters in typescript" link="/first-post" imageURL="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+		 tags={["typescript", "pattern"]} />
+		</Section>
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -1,0 +1,45 @@
+---
+import DiscordButton from "./Buttons/DiscordButton.astro";
+import CommunityCounter from "./CommunityCounter/CommunityCounter.astro";
+
+const today = new Date();
+---
+
+<footer>
+	<DiscordButton text="JOIN COMMUNITY" />
+	<CommunityCounter count={4461} />
+	<!-- &copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved. -->
+	<p>
+		This website was loosely inspired by: <a  href="">Fireship.io</a>, <a  href="">Leerob.io</a> and <a  href="">Tailwindcss.com</a>.   
+	</p>
+</footer>
+<style>
+	footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5rem;
+	color: hsla(0, 0%, 39%, 1);
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	padding: 25px;
+	text-align: center;
+	}
+
+	a{
+		color: hsla(212, 100%, 50%, 1);
+	}
+
+	p{
+	margin-top: 3.5rem;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;	
+	}
+</style>

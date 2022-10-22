@@ -1,0 +1,62 @@
+---
+interface Props{
+    title: string;
+}
+
+
+const { title, ...props } = Astro.props;
+
+
+
+---
+
+<div class="card"  {...props}>
+    <h6>{title}</h6>
+    <slot/>
+    <div class="card__footer">
+        <span>
+            8 😎
+        </span>
+        <span>
+            24 🔥
+        </span>
+        <span>
+            40 🎉
+        </span>
+    </div>
+</div>
+<style>
+	.card{
+        position: relative;
+        box-sizing: border-box;
+        padding: 0.1rem 1rem 0.1rem 1rem;
+        background: #171717;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 12px;
+        border: 1px solid;
+        border-image-source: linear-gradient(180deg, #6DE5B8 0%, #9036EA 100%);
+    }
+
+    .card__footer{
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        right: 0;
+        padding: 1rem;
+    }
+
+    .card__footer > span {
+        margin-left: 0.6rem;
+    }
+
+    span{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        color: white;
+    }
+
+
+
+</style>

@@ -1,0 +1,62 @@
+---
+interface Props{
+    isCode?: boolean;
+}
+
+
+const { isCode, class:className, ...props } = Astro.props;
+
+
+
+---
+
+<div class="card" class={className} {...props}>
+    {isCode &&
+    <div class="code__items">
+        <div class="code__item red"></div>
+        <div class="code__item yellow"></div>
+        <div class="code__item green"></div>
+    </div>
+    }
+
+    <slot/>
+</div>
+<style>
+	.card{
+    padding: 1.4rem 1rem 1.4rem 1rem;
+    background: #171717;
+    border-radius: 12px;
+    border: 1.5px solid black;
+    }
+
+    .code__items{
+        display: flex;
+        justify-content: ;
+        margin-bottom: 1.4rem;
+    }
+
+
+    .red{
+        background: #FF5F56;
+    }
+
+    .yellow{
+        margin-left: 6px;
+        background: #FFBD2E;
+    }
+
+    .green{
+        margin-left: 6px;
+        background: #27C93F;
+    }
+
+    .code__item{
+        width: 12px;
+        
+        height: 12px;
+        border-radius: 50%;
+    }
+
+
+
+</style>

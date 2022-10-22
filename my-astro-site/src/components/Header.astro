@@ -1,0 +1,66 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../config';
+import Search from './icons/search.astro';
+import Avatar from './Avatar/Avatar.astro';
+import Card from './Card/Card.astro';
+---
+
+<header>
+	<nav class="flex justify-between p-6">
+		<div class="nav__links">
+			<HeaderLink class="nav__link"  href="/">About</HeaderLink>
+			<HeaderLink class="nav__link" href="/blog">Blog</HeaderLink>
+			<HeaderLink class="nav__link" href="/about">Contact</HeaderLink>
+		</div>
+		<Search />
+	</nav>
+	<div class="container grid">
+		<div class="items">
+			<Avatar imageURL="https://www.kristijan.me/_next/image?url=%2Fimages%2Fmy_picture.jpg&w=1080&q=75" />
+		</div>
+		<div class="items special__block">
+			<h1 class="heading__h1">Kristijan Vidović</h1>
+			<h6 class="mt-2">Frontend Developer</h6>
+			<Card>
+				<p class="card__text">
+					Helping developers build a faster web. Teaching about web development, serverless, and React / Next.js.
+				</p>
+			</Card>
+		</div>
+	</div>
+</header>
+<style>
+	nav{
+		font-size: 17px !important;
+	}
+
+	.flex{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.5rem;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		grid-gap: 1.5rem;
+	}
+
+	.nav__link{
+		margin-right: 0.75rem;
+	}
+
+
+	.items:nth-child(1) {
+  	justify-self: end;
+}
+
+
+
+
+
+
+
+</style>

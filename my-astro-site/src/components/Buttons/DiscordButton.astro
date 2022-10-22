@@ -1,0 +1,49 @@
+---
+import DiscordIcon from '../icons/discord-icon.astro';
+
+interface Props{
+    text: string;
+    align?: 'center'; 
+}
+
+const {text, align, ...props} = Astro.props;
+
+---
+
+<button class={"btn__discord"} {...props}>
+    <DiscordIcon />
+ <span>
+    {text}
+ </span>
+</button>
+<style>
+
+    button{
+        all: unset;
+    }
+
+    .btn__discord{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:hsla(271, 91%, 65%, 1);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+    padding: 0.5rem 1rem;
+    }
+
+    .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Add space between flex items */
+    .btn__discord > * {
+    margin: 0 0.5rem;
+    }
+
+</style>
